@@ -91,7 +91,7 @@
           "sourceStrategy": {
             "from": {
               "kind": "ImageStreamTag",
-              "namespace": "${NAMESPACE}",
+              "namespace": "openshift",
               "name": "nodejs:${NODEJS_VERSION}"
             },
             "env":  [
@@ -186,22 +186,6 @@
                     "containerPort": 5000
                   }
                 ],
-                "readinessProbe": {
-                  "timeoutSeconds": 3,
-                  "initialDelaySeconds": 3,
-                  "httpGet": {
-                    "path": "/",
-                    "port": 5000
-                  }
-                },
-                "livenessProbe": {
-                    "timeoutSeconds": 3,
-                    "initialDelaySeconds": 30,
-                    "httpGet": {
-                        "path": "/",
-                        "port": 5000
-                    }
-                },
                 "resources": {
                     "limits": {
                         "memory": "${MEMORY_LIMIT}"
