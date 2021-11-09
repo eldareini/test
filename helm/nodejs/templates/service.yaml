@@ -5,9 +5,11 @@ metadata:
   annotations:
     description: Exposes and load balances the application pods
 spec:
+  type: NodePort
   ports:
   - name: web
     port: 8080
     targetPort: 8080
+    nodePort: 30007
   selector:
     name: {{ .Values.name | quote }}
