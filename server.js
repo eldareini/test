@@ -2,7 +2,9 @@ const express=require('express')
 const app=express();
 
 app.get('/test',(req,res) => {
-  res.send('test complite')
+  const a = 5
+  const b = 4
+  res.send(`test complite ${a*b}`)
 })
 
 app.listen(5000,() => {
