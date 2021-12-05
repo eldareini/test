@@ -1,7 +1,7 @@
 const express=require('express')
 const app=express();
 
-app.get('/test',(req,res) => {
+app.get('/',(req,res) => {
   const a = 5
   const b = 4
   res.send(`test complite ${a*b}`)
