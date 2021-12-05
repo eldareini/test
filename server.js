@@ -6,7 +6,7 @@ app.get('/test',(req,res) => {
   const b = 4
   res.send(`test complite ${a*b}`)
 })
-
-app.listen(8080,() => {
-  console.log('listening on port 5000')
+const port = 8080
+app.listen(port,() => {
+  console.log(`listening on port ${port}`)
 })
